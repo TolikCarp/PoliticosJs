@@ -1,0 +1,68 @@
+body{
+	background: 
+}
+
+div{
+	border: 1px solid black;
+	padding: 1em;
+
+}
+
+.nav-ul{
+
+	display: flex;
+	align-items: baseline;
+	font-family: 'Cedarville Cursive', cursive;
+	
+	font-size: 1.5em
+
+}
+
+.nav-ul li{
+	
+	list-style-type: none;
+	margin :1.5em;
+
+}
+
+.nav-ul li a {
+	
+	text-decoration: none;
+	
+}
+
+
+select{
+	border :none;
+	background-color: transparent;
+    
+    text-rendering: auto;
+    color: #0d6efd;
+    letter-spacing: normal;
+    word-spacing: normal;
+    
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    appearance: none;
+    
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+
+   
+    outline: none;
+    border-style: none;
+    cursor: pointer;
+    }
+
+
+
+select:hover {
+	
+	cursor: pointer;
+	}
+
+
+
