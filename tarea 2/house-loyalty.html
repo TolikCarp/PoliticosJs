@@ -3,18 +3,15 @@
     <head>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
-        
-      <link rel="stylesheet" href="style/style.css">
-
+        <link rel="stylesheet" href="style/style.css">
 
     </head>
     
     <body>
         <header>
-         <!-----------------------------NAV'S ------------------------------------->
+         <!-----------------------------NAV'S MENU-------------------------------------->
         <nav>
-                <div id="img">
+            <div id="img">
 
         
                     <img src="img/icono.ico"  alt="picture"> 
@@ -26,9 +23,11 @@
                 
             
        
-                </div>
+                    </div>
 
-                <ul class="">
+
+                    <ul class=" nav-ul">
+
                     <li>
                         <a href="index.html">
                             Home
@@ -37,13 +36,13 @@
                     <li>
                         <!--1st select-->
                         <select onchange="Congress()">
-                            <option disabled hidden selected value="">
+                            <option disabled="" hidden="" selected="" value="">
                                 Congress
                             </option>
                             <option id="senate" value="Senate">
                                 Senate
                             </option>
-                            <option class="decorated" id="house" value="House">
+                            <option  id="house" value="House">
                                 House
                             </option>
                         </select>
@@ -53,7 +52,7 @@
                    
                     <li>
                         <select onchange="Congress()">
-                            <option disabled hidden selected value="">
+                            <option disabled="" hidden="" selected="" value="">
                                 Attendance
                             </option>
                             <option id="Senate_Attendance" value="Senate_Attendance">
@@ -69,7 +68,7 @@
 
                     <li>
                         <select onchange="Congress()">
-                            <option disabled hidden selected value="">
+                            <option disabled="" hidden="" selected="" value="">
                                 Party Loyalty
                             </option>
                             <option id="Senate_Loyalty" value="Senate_Loyalty">
@@ -86,82 +85,103 @@
         </nav>
 
         <!------------------------------NAV'S END------------------------------->
-     
+        
         </header>
-            <!--MAIN-->
-
-        <main>
-        <div>     
-            <h2>Congressmen</h2>
-            <p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
-            <p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative. </p>
-
-
-            <form action="" id="formulario">
-                 
-
-
-
-
-            <label for="R">Republicanos</label>
-            <input type="checkbox"  id="R" class="boton" onclick="nuevafuncion()" >
-
-
-            <label for="D">Democratas </label>
-            <input type="checkbox"  id="D"  class="boton" onclick="nuevafuncion()" > 
-
-
-            <label for="ID">Independientes</label>
-            <input type="checkbox" id="ID" class="boton" onclick="nuevafuncion()">
-
-
-
-             <select name="" id="select"  onchange="nuevafuncion()">
-              
-              <option value="estados" id="estados">Estados</option>
              
-             </select> 
+  
+
+        <!--------------------------------------------------------------------------------------->
+
+        <main class="container-fluid">
 
 
-             </form>
+        <div class="row">   
+
+          <div class="col-6">
+
+            <h2>Party Loyalty of House</h2>
+            <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
+
+           </div>
+
+    	  <!---->
+
+         <div class="col-6">  
+            <h2>House at a glance</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Party</th>
+                        <th>Number of Reps</th>
+                        <th>% Voted with Prty</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodySenateAttendance">
+                   
+
+                </tbody>
+            </table>
+            </div> 
+        </div>
+            <!---->
 
 
 
+            <div class="row ">  
 
+            <div class="col-6">
 
-
-       	      <table class="table" style="text-align: center;">
+            <h2>Least Loyal (Bottom 10% of Party)</h2>
+            <table class="table"> 
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Party</th>
-                        <th>State</th>
-                        <th>Years in Office</th>
-                        <th>Votes with Party</th>
-                        
+                        <th>Number Party Votes</th>
+                        <th>% Party Votes</th>
                     </tr>
                 </thead>
-                <tbody id="tabla">
-
-
-                
-                </tbody>
-
-
+                <tbody id="tbodyLeastLoyal">
+                </tbody>   
+                 
             </table>
-	    </div>
+
+            </div>
+
+             <!---->
+
+             <div class="col-6" >
+
+            <h2>Most Loyal (Top 10% of Party)</h2>
+            <table class=" table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Number Party Votes</th>
+                        <th>% Party Votes</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyMostLoyal">
+                   
+            
+                </tbody>
+                </table>
+
+            </div>
+
+    	</div>
 
         </main> 
 
-         <footer>
+
+        <footer>
             <p class="text-center"> 2016 ||All rights reserved</p>
-        </footer>  
+        </footer>
+  
+       <script src="scripts/pro-congress-113-house.js"></script>
+       
+       <script src="scripts/third.js"></script>
+       
+       
 
-
-
-        <script src="scripts/pro-congress-113-house.js"></script>
-      
-        <script src="scripts/mainUno.js"></script>
-
-    </body>
+</body>
 </html>

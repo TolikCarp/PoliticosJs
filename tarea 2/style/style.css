@@ -1,68 +1,103 @@
-body{
-	background: 
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-div{
-	border: 1px solid black;
-	padding: 1em;
+/*font-family: 'Montserrat', sans-serif;*/
 
-}
-
-.nav-ul{
-
-	display: flex;
-	align-items: baseline;
-	font-family: 'Cedarville Cursive', cursive;
+*{
 	
-	font-size: 1.5em
-
+    font-family:  'Montserrat', sans-serif; 
 }
 
-.nav-ul li{
-	
-	list-style-type: none;
-	margin :1.5em;
+/*------------------------------nav's menu-------------------------------------*/
+
+
+
+nav{display: flex;}
+
+#img img{
+    width:12em;
+    height:11em;
+    padding-left: 0.2em; 
+
 
 }
+#img a {
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+}
 
-.nav-ul li a {
-	
-	text-decoration: none;
-	
+nav ul{
+    display:flex;
+    align-items: baseline;
+    list-style-type: none;
+    align-items: center;
+ 
+}
+
+ul li a {
+
+ 	
+ 	color:#2263BE;
+ 	font-style: italic;
+    font-weight: 600;
+    text-decoration: none;
+
+ 	
 }
 
 
-select{
-	border :none;
-	background-color: transparent;
-    
+
+
+
+select {
+
+    padding: 0.5em;
+    -webkit-writing-mode: horizontal-tb !important;
     text-rendering: auto;
-    color: #0d6efd;
+    color:#2263BE;
     letter-spacing: normal;
     word-spacing: normal;
-    
+    text-transform: none;
     text-indent: 0px;
     text-shadow: none;
-    display: inline-block;
-    text-align: center;
+    text-align: start;
     appearance: none;
-    
+    box-sizing: border-box;
     align-items: center;
     white-space: pre;
     -webkit-rtl-ordering: logical;
-
-   
-    outline: none;
-    border-style: none;
+    background-color: #F0F8FF;
     cursor: pointer;
-    }
+    margin: 0em;
+    font-style: italic;
+ 	font-weight: 600;
+    border-radius: 0px;
+    border-width: 0px;
+    
+   /* border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));*/
+    /*border-image: initial;*/
+}
 
+select:focus{
+   border-style:none;
+    
+}
 
+select:hover{
+	 
 
-select:hover {
-	
 	cursor: pointer;
-	}
+
+}
+
+
+/*------------------------------nav's end-------------------------------------*/
+
+
+
+
+
+
 
 
 

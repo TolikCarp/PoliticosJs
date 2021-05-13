@@ -1,30 +1,9 @@
-function camara(){
 
- var congreso= document.getElementById("Congress")
- const house = document.getElementById("house")
- const senate =document.getElementById("senate")
-
-
-
-
-  if(house.selected ){location.href="house-starter-page.html";}
-  if(senate.selected ){location.href="senate-starter-page.html";}
-}
-
-
-
-
-
-var data = date.results[0].members.sort()
+var data = date.results[0].members
 
 var tabla = document.getElementById("tabla")
 
 var select = document.getElementById("select")
-
-
-/*----------------------------------------------------------------------------------------------------------------------------*/
-
-
 
 
 let republicanos = data.filter( miembro => miembro.party == "R"  )
@@ -33,28 +12,38 @@ let democratas = data.filter( miembro => miembro.party == "D"  )
 
 let independientes = data.filter( miembro => miembro.party == "ID"  )
 
-/*----------------------------------------------------------------------*/
-
-
-
-
-var botones = document.getElementsByClassName("boton")
-
-var arraybotones = Array.from(botones)
-
-
-
 
 
 var R = document.getElementById("R")
 var D = document.getElementById("D")
 var ID = document.getElementById("ID")
-/*-----------------------------------------------------------*/
+
+
+/*-------------------------------------NAV-MENU FUNCTIONS-------------------------*/
+function Congress(){
+
+
+ let house = document.getElementById("house")
+ let senate =document.getElementById("senate")
+
+ let houseAttendance = document.getElementById("House_Attendance")
+ let senateAttndance =document.getElementById("Senate_Attendance")
+
+ let houseLoyalty = document.getElementById("House_Loyalty")
+ let senateLoyalty =document.getElementById("Senate_Loyalty")
 
 
 
 
-/*----------------------------------------------------------*/
+  if(house.selected ){location.href="house-starter-page.html";}
+  if(senate.selected ){location.href="senate-starter-page.html";}
+
+  if(houseAttendance.selected ){location.href="house-attendance.html";}
+  if(senateAttndance.selected ){location.href="senate-attendance.html";}
+
+  if(houseLoyalty.selected){location.href="house-loyalty.html";}
+  if(senateLoyalty.selected ){location.href="senate-loyalty.html";}
+}
 
 /*----------------------------------------------------------*/
 function meterDatos(a , b){  /* funcion para cargar datos  tabla*/
@@ -107,14 +96,14 @@ function meterDatos(a , b){  /* funcion para cargar datos  tabla*/
 
 
 
-}
+}meterDatos(data , tabla)
 
 
 
 
 
 /*-----------------------------------------------------------------*/
-meterDatos(data , tabla)
+
     
 
 
@@ -194,3 +183,5 @@ function  nuevafuncion(){
           meterDatos(contador.sort(),tabla)
        
 } 
+
+
